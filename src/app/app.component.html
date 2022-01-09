@@ -1,16 +1,70 @@
-<div class="container flex">
-  <div class="header">
-    <ul>
-      <li class="p-2 "><a href='home'>Home</a></li>
-    </ul>
-    <ul class='list-none'>
-      <li class='p-2'></li>
-      <li class='p-2'>Projects</li>
-      <li class='p-2'>Contact Me</li>
-      <li class='p-2'>About Me</li> 
-  </ul>
+<div class="container m-0 p-0 w-screen">
+  <!-- <div class="head">
+    <header class='flex justify-content:space-between width:100%' style="display:flex; justify-content:space-between">
+      <ul class='' style="list-style: none;">
+        <li><a href="#home">Home</a></li>
+      </ul> 
+      <ul class="flex p-2">
+        <li class="p-2"><a href="#projects">Home</a></li>
+        <li class='p-2'><a href="#contactme">Home</a></li>
+      </ul>
+    </header>
+  </div> -->
+  <!-- class home=flex flex-col  h-screen w-screen -->
+  <!-- h1 class=m-auto mt-50 text-5xl -->
+  <div class="home scrollMe" #scrollMe [scrollTop]="scrollMe.scrollHeight" id='scrollMe'>
+    <h1 class='myanimation ' >Hi I'm <span class='mytest'>Rahul Malik</span> </h1>
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mysvg cursor-pointer" (click)="scrollToBottom()" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+    </svg>
   </div>
-  <div id ='home'>
-    <h1>this is home</h1>
+  <div class="home flex h-screen w-screen" id='home'>
+    <h2 class='myanimation m-auto text-3xl' >I make websites, APIs and backend. I do all those things using
+      <span class='mytest' style="font-style: italic;">Angular, Java, NodeJs</span></h2>    
+      <h3 class="text-2xl" >Why dont you checkout some of my projects?</h3>
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mysvg cursor-pointer" (click)="scrollToBottom()" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+      </svg>
+  </div>
+  
+  <div class='projects h-screen w-screen bg-gray-100' id="projects">
+    <div class="content p-10 h-max w-max">
+      <h1 class='text-2xl p-0'>These are my Projects</h1>
+      <div class="projects-list pt-5 ">
+        
+        <div class="1 card bg-blue-100 rounded-lg text-center" *ngFor="let project of projectList">
+          <h1>{{project.ProjectName}}</h1>
+          <img src={{project.imageLink}} height="90px" width="100px"/>
+          <p>{{project.projectDesc}}</p>
+            <a href={{project.projectLink}}>Visit</a>
+        </div>
+        <!-- <div class="2 card bg-blue-100 rounded-lg text-center">
+          <div class="img">
+            
+          </div>
+          <p>Project2</p>
+        </div>
+        <div class="3 card bg-blue-100 rounded-lg text-center">
+          <p>Project3</p>
+        </div>
+        <div class="4 card bg-blue-100 rounded-lg text-center">
+          <p>Project4</p>
+        </div>
+        <div class="5 card bg-blue-100 rounded-lg text-center">
+          <p>Project5</p>
+        </div> -->
+       
+      </div>
+    </div>
+    
+  
+  </div>
+  <div class="contact h-screen w-screen m-0" id = "contactme">
+    <div class="container bg-gray-100">
+      <div class="form">
+        
+      </div>
+     <p>name</p>
+    </div>
   </div>
 </div>
