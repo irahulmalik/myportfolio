@@ -14,7 +14,10 @@ justify-content: space-around;
   .mysvg{
     // opacity: 0%;
     margin: 50px auto;
+  }
+  .mysvg:focus{
     animation: 2s ease-in 0s 1 slideInDown;
+
   }
   .mysvg::after{
     opacity: 100%;
@@ -45,8 +48,8 @@ justify-content: space-around;
       flex-grow: 1;
       gap: 1rem;
       .card{
-        height: 10rem;
-        width: 30rem;
+        height: 15rem;
+        width: 50rem;
       }
     }
   }

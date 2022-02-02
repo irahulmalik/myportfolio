@@ -31,16 +31,18 @@ export class AppComponent implements OnInit, AfterViewChecked {
     projectDesc:"this is great project"
   }];
   // @ViewChild('scrollMe') private myScrollContainer: ElementRef ;
-  constructor(){
+  constructor(private elRef: ElementRef){
 
   }
   ngOnInit() { 
     this.scrollToBottom();
 }
-
 ngAfterViewChecked() {        
   this.scrollToBottom();        
 } 
+onSubmit(){
+  console.log("Submitted");
+}
 
 scrollToBottom():void{
     console.log("Hey do this");
